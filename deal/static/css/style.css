@@ -1,0 +1,32 @@
+@font-face { font-family: 'S-CoreDream-8Heavy'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-8Heavy.woff') format('woff'); font-weight: normal; font-style: normal; }
+
+.sss{
+    font-family: 'S-CoreDream-8Heavy';
+    font-size: 1.8rem;
+}
+
+.ssd{
+    font-family: 'S-CoreDream-8Heavy';
+    font-size: 3rem;
+}
+
+.centered { display: table; margin-left: auto; margin-right: auto; }
+
+body {
+    background: linear-gradient(to right, #feac5e, #c779d0, #4bc0c8);}
+
+th{
+    background-color: beige;
+    font-family: 'S-CoreDream-8Heavy';
+    text-align: center;
+}
+td{
+    font-family: 'S-CoreDream-8Heavy';
+    text-align: center;
+}
+.sumtable{
+    font-family: 'S-CoreDream-8Heavy';
+    font-size:1rem;
+}
+
+

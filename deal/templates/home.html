@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel = "stylesheet" href ="{% static 'css/style.css' %}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <br><br>
+    <h1 class="centered ssd">멋사 회계 장부 </h1>
+    <br><img src="static/img/likelion3.png" class="centered" width="230"0 height="200"><br>
+    <form action = "{% url 'create' %}">
+         <table border="1" bordercolor="black" width="300" height="300"; align="center">
+             <tr bgcolor= "#FFBE04" align ="center">
+                <p><td colspan = "4" span style="color:#000000" class ="sss">입출금 내역</td></p>
+            </tr>
+                <th class ="sss">이름</th>
+                <th class ="sss">입금</th>
+                <th class ="sss">출금</th>
+                <th class ="sss">날짜</th>
+        
+            <tr>
+                    <td width="160.8" height="22"><input type="text" name="name" value=""></td>
+                    <td width="160.8" height="22"><input type="number" name="deposit" value=""></td>
+                    <td width="160.8" height="22"><input type="number" name="withdraw" value=""></td>
+                    <td width="160.8" height="22"><input type="date" name="input_date" value=""></td>
+            </tr>
+        </table>
+        <br><br>
+        <div class="centered"> <input type = "submit" value = "SUBMIT!" style="width:75; font-family:S-CoreDream-8Heavy; background-color:#FFBE04; border:#FFBE04" class="btn btn-primary btn-xl rounded-pill mt-5" ></div>  <!--아 input 안에 submit을 썼으므로 적용을 하려면 class를 input 태그 안에 적어야 한다. -->
+    </form>
+<br>
+   <a href="{% url 'sums' %}" class ="sss centered" style="text-align:center; color:black" >총계확인하기</a>
+
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>

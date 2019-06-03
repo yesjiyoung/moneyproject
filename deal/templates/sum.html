@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <link rel = "stylesheet" href ="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+    .box1 {
+        border: 2px;
+    }
+    </style>
+</head>
+<body>
+    <div class="centered">
+            <br>
+            <h1 class="sss">여기에서 이때까지 입.출금 내역을 확인 하실 수 있습니다.</h1>
+            <br><br>
+            <div class="sumtable" style="border: 1px solid gold; float: left; width: 17%;">
+               <tabel>
+                   <th><br>이름<br></th>
+                   <hr style="border: solid 1px gold;">
+                   <tr>
+                       <td>
+                        {% for k in moneys.all %}   
+                        {{k.name}}
+                        <hr style="border: solid 1px gold;">
+                        {% endfor %}
+                        </td>
+                    </tr>
+               
+                </tabel>
+            </div>
+        
+            <div class="sumtable" style="border: 1px solid red; float: left; width: 17%;">
+                    <tabel>
+                        <th><br>입금<br></th>
+                        <hr style="border: solid 1px red;">
+                        <tr>
+                            <td>
+                             {% for k in moneys.all %}   
+                                {{k.deposit}}    
+                             <hr style="border: solid 1px red;">
+                             {% endfor %}
+                             </td>
+                         </tr>
+                    
+                     </tabel>
+            </div>
+        
+            <div class="sumtable" style="border: 1px solid blue; float: left; width: 17%;">
+                    <tabel>
+                        <th><br>출금</th><br></th>
+                        <hr style="border: solid 1px blue;">
+                        <tr>
+                            <td>
+                             {% for k in moneys.all %}   
+                             {{k.withdraw}}
+                             <hr style="border: solid 1px blue;">
+                            
+                             {% endfor %}
+                             </td>
+                         </tr>
+                    
+                     </tabel>
+            </div>
+        
+            <div class="sumtable" style="border: 1px solid blue; float: left; width: 30%;">
+                    <tabel>
+                        <th><br>날짜<br></th>
+                        <hr style="border: solid 1px blue;">
+                        <tr>
+                            <td>
+                             {% for k in moneys.all %}   
+                             {{k.input_date}}
+                             <hr style="border: solid 1px blue;">
+                             
+                             {% endfor %}
+                             </td>
+                         </tr>
+                    
+                     </tabel>
+            </div>
+
+            <div class="sumtable" style="border: 1px solid blue; float: left; width: 17%;">
+                    <tabel>
+                        <th><br>누적 합계<br></th>
+                        <hr style="border: solid 1px blue;">
+                        <tr>
+                            <td>
+                                {% for k in total %}   
+                                 {{k}}
+                                 <hr style="border: solid 1px blue;">
+                                
+                                {% endfor %}
+                            </td>                  
+                         </tr>            
+                     </tabel>
+            </div>
+    </div>
+    
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  
+
+</body>
+</html>
+
